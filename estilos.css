@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* overflow: hidden; */
+    
+  }
+  
+  /* Barra de navegación fija */
+  .main-header {
+    background-color: white;  /* color de fondo que prefieras */
+    position: sticky;        /* la clave para que se “pegue” al hacer scroll */
+    top: 0;                  /* se queda pegado en la parte superior */
+    z-index: 9999;           /* para asegurarte de que quede por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra opcional para destacar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .main-nav{
+    width: 100%;
+    background-color: red;
+    
+  }
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  }
+  .main-nav li{
+    background-color: red;
+  }
+  .main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .algo{
+    height: 500px;
+    width: 100%;
+    background-color: white;
+  }
+  
+
+  /* Envuelves el iframe en una clase .video-container */
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    border: none;
+  }
+  
+  .flex-padre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .title{
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    
+  }
+
+  h1, h2 {
+    font-family: Pinup, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 2.8em;
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    color: rgb(234, 0, 42);
+}
+.grill{
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
