@@ -1,109 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    /* overflow: hidden; */
-    
-  }
-  
-  /* Barra de navegación fija */
-  .main-header {
-    background-color: white;  /* color de fondo que prefieras */
-    position: sticky;        /* la clave para que se “pegue” al hacer scroll */
-    top: 0;                  /* se queda pegado en la parte superior */
-    z-index: 9999;           /* para asegurarte de que quede por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra opcional para destacar */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    
-  }
-  
-  .main-nav{
-    width: 100%;
-    background-color: red;
-    
-  }
-  .main-nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-  }
-  .main-nav li{
-    background-color: red;
-  }
-  .main-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .algo{
-    height: 500px;
-    width: 100%;
-    background-color: white;
-  }
-  
-
-  /* Envuelves el iframe en una clase .video-container */
-  .video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 */
-  }
-
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    border: none;
-  }
-  
-  .flex-padre{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
-  }
-
-  .title{
-    width: 100%;
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-    color: red;
-    text-align: center;
-    font-weight: bold;
-    
-  }
-
-  h1, h2 {
-    font-family: Pinup, Arial, "Helvetica Neue", Helvetica, sans-serif;
-    text-transform: uppercase;
-    font-size: 2.8em;
-    font-weight: 900;
-    line-height: 1;
-    text-align: center;
-    color: rgb(234, 0, 42);
+@font-face {
+  font-family: 'MiFuente';
+  src: url('fonts/LilitaOne-Regular.ttf') format('truetype'); /* Ruta al archivo de la fuente */
 }
-.grill{
+* {
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+
+  font-family: 'MiFuente', Arial,  Helvetica, sans-serif;
+  font-size: 16px; /* Tamaño de fuente por defecto */
+}
+body{
+  margin: 0px;
+}
+header{
+  position: sticky;        /* la clave para que se “pegue” al hacer scroll */
+  top: 0px;                  /* se queda pegado en la parte superior */
+  z-index: 9999;           /* para asegurarte de que quede por encima de otros elementos */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: rgb(0, 164, 176);
+}
+header .contenedor2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 85%;
+  
+}
+header .contenedor1{
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 15%;
+}
+.contenedor1 a img{
+  height: 100%;
+  width: 100%;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+  font-size: 32px;
+  list-style: none;
+  flex: 2 2 100%;
+}
+.navbar ul li{
+  justify-content: space-around;
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: 1;
+}
+.navbar ul li a{
+  color: white;
+  text-decoration: none;
+}
+.algo{
+  width: 100px;
+  height: 10000px;
+  background-color: yellow;
+}
+
+.logo{
   width: 100%;
   height: 100%;
-  flex-wrap: wrap;
-  display: flex;
+}
+.logo img{
+  width: 50%;
+  height: 50%;
+  
+}
+/* celulares */
+@media (max-width:480px){
+  .contenedor{
+    background-color: red;
+  }
+}
+/* tabletas */
+@media (max-width: 780px) and (min-width: 481px){
+  .contenedor{
+    background-color: blue;
+  }
 }
 
