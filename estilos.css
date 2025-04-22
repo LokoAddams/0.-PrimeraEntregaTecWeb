@@ -1,15 +1,27 @@
 @font-face {
   font-family: 'MiFuente';
-  src: url('fonts/LilitaOne-Regular.ttf') format('truetype'); /* Ruta al archivo de la fuente */
+  src: url('fonts/ITCAvantGardeStd-Bold.woff') format('truetype'); /* Ruta al archivo de la fuente */
 }
 * {
   box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
-
   font-family: 'MiFuente', Arial,  Helvetica, sans-serif;
-  font-size: 16px; /* Tamaño de fuente por defecto */
+  font-size: 24px; /* Tamaño de fuente por defecto */
 }
 body{
   margin: 0px;
+  
+}
+.limitador{
+  display: flex;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  width: 100%; /* Ancho del contenedor */
+  margin: 10px;
+  justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .limitador {
+    justify-content: space-between;
+  }
 }
 header{
   position: sticky;        /* la clave para que se “pegue” al hacer scroll */
@@ -20,24 +32,28 @@ header{
   flex-wrap: wrap;
   flex-direction: row;
   background-color: rgb(0, 164, 176);
+  align-items: center;
+  justify-content: center;
+
 }
 header .contenedor2{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-grow: 1;
-  flex-shrink: 2;
-  flex-basis: 85%;
+  flex-grow: 10;
+  flex-shrink: 10;
+  flex-basis: 75%;
   
 }
 header .contenedor1{
-  flex-grow: 1;
+  flex-grow: 2;
   flex-shrink: 0;
-  flex-basis: 15%;
+  flex-basis: 25%;
 }
 .contenedor1 a img{
   height: 100%;
   width: 100%;
+  padding: 4%;
 }
 .navbar{
   width: 100%;
@@ -53,16 +69,21 @@ header .contenedor1{
   font-size: 32px;
   list-style: none;
   flex: 2 2 100%;
+  padding: 0px;
+  justify-content: center;
 }
 .navbar ul li{
   justify-content: space-around;
-  flex-grow: 1;
-  flex-shrink: 2;
-  flex-basis: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 .navbar ul li a{
   color: white;
   text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 4px;
 }
 .algo{
   width: 100px;
@@ -79,6 +100,25 @@ header .contenedor1{
   height: 50%;
   
 }
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+}
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+
 /* celulares */
 @media (max-width:480px){
   .contenedor{
@@ -91,4 +131,123 @@ header .contenedor1{
     background-color: blue;
   }
 }
+
+/* Mostrar el ícono de menú en pantallas pequeñas */
+@media (max-width: 700px) {
+  .menu-icon {
+    display: flex;
+  }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(0, 164, 176);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin : 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transition-property: background;
+  transition-duration: 0.4s;
+  transition-timing-function: linear;
+  }
+  .contenedor2:hover {
+    animation-name: tilt;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes tilt {
+    0%,
+    100% {
+      
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+  
+  
+  .menu-toggle:checked + .menu-icon + .navbar ul {
+    display: flex;
+  }
+  .navicon span, .navicon span:after, .navicon span:before {
+    content: '';
+    border-radius: .25em;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 2em;
+    height: .33em;
+    background: currentcolor;
+    transition: transform .2s, background .2s, margin .2s, width .2s, height .2s
+  }
+  .contenedor2{
+    align-items: end;
+    justify-content: end;
+  }
+}
+.contenedor3{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  /* margin: 0 auto; */
+  justify-content: space-around;
+}
+
+.contenedor1 img:hover  {
+  animation-name: bounce;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.navbar ul li a:hover  {
+  animation-name: bounce;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.elemento-flexible{
+  flex: 0 1 25%;
+  max-width: 400px;
+}
+
+.contenedor3 img{
+  max-width: 100%; /* Evita que las imágenes excedan el ancho del contenedor */
+  height: auto;
+}
+label{
+  margin: 15px;
+}
+
 
