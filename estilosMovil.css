@@ -138,3 +138,32 @@
       top: 0;
     }
   }
+
+  @media screen and (min-width: 815px) and (max-width: 935px) {
+    .elemento-flexible{
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin: 3%;
+    }
+    .elemento-flexible img{
+      flex: 1 1 50% !important;
+      max-width: 50%;
+    }
+    .elemento-flexible .modificador-horizontal{
+      flex: 1 1 10% !important;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+    .elemento-flexible .button-cta{
+      left: 60%;
+    }
+    .modificador-horizontal .triangulo-inferior-derecho{
+      right: 50%;
+    }
+  }
