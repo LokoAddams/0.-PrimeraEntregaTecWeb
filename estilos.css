@@ -405,7 +405,7 @@ span{
   border-right: 97vw solid white; /* Cambia el color según el fondo */
   position: absolute;
   bottom: 0;
-  left: 0 ;
+  right: 0 !important;
 }
 
 .triangulo-inferior-derecho {
@@ -415,7 +415,7 @@ span{
   border-left: 97vw solid white; /* Cambia el color según el fondo */
   position: absolute;
   bottom: 0;
-  right: 0 ;
+  left: 0 ;
 }
 .limitador3{
   background-color: rgb(0, 164, 176);
