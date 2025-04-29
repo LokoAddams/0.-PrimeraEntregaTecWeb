@@ -166,4 +166,19 @@
     .modificador-horizontal .triangulo-inferior-derecho{
       right: 50%;
     }
+
+    .triangulo-superior-izquierdo{
+      width: 0;
+      height: 0;
+      border-top: 20vh solid white;
+      border-right: 40vw solid transparent; /* Cambia el color según el fondo */
+      max-width: 40vw;
+      position: absolute;
+      top: 0;
+      left: 0 !important;
+    }
+    
+    .triangulo-superior-derecho{
+      right: 46vw;
+    }
   }
